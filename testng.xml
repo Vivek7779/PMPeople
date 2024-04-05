@@ -4,14 +4,17 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.PMPeople.TestClass2_SignIn.T1_Login"/>
-      <class name="com.PMPeople.TestClass1_SignUp.T5_NewSignUp"/>
       <class name="com.PMPeople.TestClass1_SignUp.T4_ChangingName_Country_FromSignUp"/>
-      <class name="com.PMPeople.TestClass1_SignUp.T2_Checking_with_negative_details"/>
-      <class name="com.PMPeople.TestClass6_ResourceManager.T1_AddResourcePool"/>
+      <class name="com.PMPeople.TestClass1_SignUp.T5_NewSignUp"/>
       <class name="com.PMPeople.TestClass1_SignUp.T1_SignUp"/>
-      <class name="com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool"/>
       <class name="com.PMPeople.TestClass4_EditProfile.T1_ChangePassword"/>
       <class name="com.PMPeople.TestClass4_EditProfile.T2_ChangeName"/>
+      <class name="com.PMPeople.TestClass1_SignUp.T2_Checking_with_negative_details"/>
+      <class name="com.PMPeople.TestClass6_ResourceManager.T1_AddResourcePool"/>
+      <class name="com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool"/>
+      <class name="com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount"/>
+      <class name="com.PMPeople.TestClass2_SignIn.T1_Login2_demo"/>
+      <class name="com.PMPeople.TestClass3_ForgotPassword.T1_ForgotPassword"/>
       <class name="com.PMPeople.TestClass1_SignUp.T3_SignUp_with_registered_credentials"/>
     </classes>
   </test> <!-- Test -->

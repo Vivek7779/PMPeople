@@ -15,28 +15,19 @@ public class T4_ChangingName_Country_FromSignUp extends BaseClass{
 	public void T4ChangingName_FromSignUp () throws IOException, InterruptedException {
 		
 		driverinitialize();
+		maximizeWindow();
 		driver.get("http://115.244.148.118:8195/signup");
-		driver.manage().window().maximize();
-		Thread.sleep(2000);
 		
 		WebElement FirstName=driver.findElement(By.name("Fname"));
-		Thread.sleep(2000);
-		FirstName.click();
 		FirstName.sendKeys("Sunita");
 		
 		WebElement LastName=driver.findElement(By.name("Lname"));
-		Thread.sleep(2000);
-		LastName.click();
 		LastName.sendKeys("Patel");
 		
 		WebElement Email=driver.findElement(By.name("Email"));
-		Thread.sleep(2000);
-		Email.click();
 		Email.sendKeys("vivek.sale@plusinfosys.com");
 		
-		WebElement Password=driver.findElement(By.name("Password"));
-		Thread.sleep(2000);
-		Password.click();		
+		WebElement Password=driver.findElement(By.name("Password"));	
 		Password.sendKeys("Vivek@123");
 		
 		WebElement Country=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/div/div[5]/select"));

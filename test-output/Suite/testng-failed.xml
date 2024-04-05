@@ -8,6 +8,11 @@
           <include name="ddingExistingContractorToResourcePool"/>
         </methods>
       </class> <!-- com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool -->
+      <class name="com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount">
+        <methods>
+          <include name="deactivate"/>
+        </methods>
+      </class> <!-- com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

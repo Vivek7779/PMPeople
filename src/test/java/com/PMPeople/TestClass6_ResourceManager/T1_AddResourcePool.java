@@ -13,25 +13,9 @@ public class T1_AddResourcePool extends BaseClass{
 
 	@Test
 	public void addResourcePool() throws IOException, InterruptedException {
-		
 		driverinitialize();
-		 
-		driver.get("http://115.244.148.118:8195/signin");
-		driver.manage().window().maximize();
-		Thread.sleep(2000);
-		
-		WebElement email=driver.findElement(By.name("email"));
-		Thread.sleep(2000);
-		clickWithPause(email);
-		email.sendKeys("vivek.sale@plusinfosys.com");
-		
-		WebElement Password=driver.findElement(By.name("password"));
-		clickWithPause(Password);
-		Password.click();
-		Password.sendKeys("Vivek@123");
-		
-		WebElement Loginbtn=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/li[3]/button"));
-		clickWithPause(Loginbtn);
+		maximizeWindow();
+		performLogin("vivek.sale@plusinfosys.com", "Vivek@123");
 		
 		WebElement ResourceManager=driver.findElement(By.xpath("/html/body/div/body/main/aside/nav/div/div[2]/div/ul/li[5]/a"));
 		clickWithPause(ResourceManager);

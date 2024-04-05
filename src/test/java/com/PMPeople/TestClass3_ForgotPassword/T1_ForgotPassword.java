@@ -24,8 +24,6 @@ public class T1_ForgotPassword extends BaseClass {
 		ForgotPassword.click();
 		
 		WebElement email=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/li[1]/input"));
-		Thread.sleep(1000);
-		email.click();
 		email.sendKeys("Viveksale123@gmail.com");
 		
 		WebElement Submit=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/li[2]/button"));

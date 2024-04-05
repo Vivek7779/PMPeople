@@ -15,28 +15,19 @@ public class T3_SignUp_with_registered_credentials extends BaseClass {
 	public void signin_with_registered_credentials () throws IOException, InterruptedException {
 		
 	driverinitialize();
+	maximizeWindow();
 	driver.get("http://115.244.148.118:8195/signup");
-	driver.manage().window().maximize();
-	Thread.sleep(2000);
 	
 	WebElement FirstName=driver.findElement(By.name("Fname"));
-	Thread.sleep(2000);
-	FirstName.click();
 	FirstName.sendKeys("Vivek");
 	
 	WebElement LastName=driver.findElement(By.name("Lname"));
-	Thread.sleep(2000);
-	LastName.click();
 	LastName.sendKeys("Sale");
 	
 	WebElement Email=driver.findElement(By.name("Email"));
-	Thread.sleep(2000);
-	Email.click();
 	Email.sendKeys("Viveksale123@gmail.com");
 	
-	WebElement Password=driver.findElement(By.name("Password"));
-	Thread.sleep(2000);
-	Password.click();		
+	WebElement Password=driver.findElement(By.name("Password"));	
 	Password.sendKeys("Vivek@123");
 	
 	

@@ -18,28 +18,26 @@ public class T1_SignUp extends BaseClass {
 	public void Signup() throws InterruptedException, IOException {
 	
 		driverinitialize();
+		maximizeWindow();
 		driver.get("http://115.244.148.118:8195/signup");
-		driver.manage().window().maximize();
+		
 		Thread.sleep(2000);
 		
 		WebElement FirstName=driver.findElement(By.name("Fname"));
-		Thread.sleep(2000);
-		FirstName.click();
+		clickWithPause(FirstName);
 		FirstName.sendKeys("Vivek");
+		System.out.println("Email entered: " + FirstName.getAttribute("value"));
 		
 		WebElement LastName=driver.findElement(By.name("Lname"));
-		Thread.sleep(2000);
-		LastName.click();
+		clickWithPause(LastName);
 		LastName.sendKeys("Sale");
 		
 		WebElement Email=driver.findElement(By.name("Email"));
-		Thread.sleep(2000);
-		Email.click();
+		clickWithPause(Email);
 		Email.sendKeys("Viveksale123@gmail.com");
 		
 		WebElement Password=driver.findElement(By.name("Password"));
-		Thread.sleep(2000);
-		Password.click();		
+		clickWithPause(Password);		
 		Password.sendKeys("Vivek@123");
 		
 		WebElement Country=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/div/div[5]/select"));

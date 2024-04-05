@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-01T15:59:56 IST" name="Default suite" finished-at="2024-04-01T16:00:23 IST" duration-ms="27153">
+  <suite started-at="2024-04-05T15:17:22 IST" name="Default suite" finished-at="2024-04-05T15:17:44 IST" duration-ms="21898">
     <groups>
     </groups>
-    <test started-at="2024-04-01T15:59:56 IST" name="Default test" finished-at="2024-04-01T16:00:23 IST" duration-ms="27153">
+    <test started-at="2024-04-05T15:17:22 IST" name="Default test" finished-at="2024-04-05T15:17:44 IST" duration-ms="21898">
       <class name="com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool">
-        <test-method signature="ddingExistingContractorToResourcePool()[pri:0, instance:com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool@4c583ecf]" started-at="2024-04-01T15:59:56 IST" name="ddingExistingContractorToResourcePool" finished-at="2024-04-01T16:00:23 IST" duration-ms="27092" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="ddingExistingContractorToResourcePool()[pri:0, instance:com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool@48f2bd5b]" started-at="2024-04-05T15:17:22 IST" name="ddingExistingContractorToResourcePool" finished-at="2024-04-05T15:17:44 IST" duration-ms="21801" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="tab_POOLDATA"]/div/div/div[1]/div[2]/div/button[2]"}
-  (Session info: chrome=123.0.6312.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[element click intercepted: Element is not clickable at point (694, 930)
+  (Session info: chrome=123.0.6312.105)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f936aa85c9f8419990dff2ba6276b71e, findElement {using=xpath, value=//*[@id="tab_POOLDATA"]/div/div/div[1]/div[2]/div/button[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58534}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58534/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f936aa85c9f8419990dff2ba6276b71e]]>
+Command: [d588794572d6090b97459ccfcc439c3f, clickElement {id=f.5E3B9B0625A810DF7666B63154783BDB.d.2D20EAF5D58F594AA36A06999D0283B3.e.2213}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54410}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54410/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d588794572d6090b97459ccfcc439c3f)] -> xpath: //*[@id="tab_POOLDATA"]/div/div/div[1]/div[6]/div/button[2]]
+Session ID: d588794572d6090b97459ccfcc439c3f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="tab_POOLDATA"]/div/div/div[1]/div[2]/div/button[2]"}
-  (Session info: chrome=123.0.6312.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (694, 930)
+  (Session info: chrome=123.0.6312.105)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f936aa85c9f8419990dff2ba6276b71e, findElement {using=xpath, value=//*[@id="tab_POOLDATA"]/div/div/div[1]/div[2]/div/button[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.86, chrome: {chromedriverVersion: 123.0.6312.86 (9b72c47a0536..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58534}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58534/devtoo..., se:cdpVersion: 123.0.6312.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f936aa85c9f8419990dff2ba6276b71e
+Command: [d588794572d6090b97459ccfcc439c3f, clickElement {id=f.5E3B9B0625A810DF7666B63154783BDB.d.2D20EAF5D58F594AA36A06999D0283B3.e.2213}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54410}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54410/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (d588794572d6090b97459ccfcc439c3f)] -> xpath: //*[@id="tab_POOLDATA"]/div/div/div[1]/div[6]/div/button[2]]
+Session ID: d588794572d6090b97459ccfcc439c3f
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -42,11 +42,10 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool.ddingExistingContractorToResourcePool(T2_AddingExistingContractorToResourcePool.java:54)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at Resources.BaseClass.clickWithPause(BaseClass.java:56)
+at com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool.ddingExistingContractorToResourcePool(T2_AddingExistingContractorToResourcePool.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -77,7 +76,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ddingExistingContractorToResourcePool -->
