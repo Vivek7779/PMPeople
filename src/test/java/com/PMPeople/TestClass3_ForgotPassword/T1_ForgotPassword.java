@@ -25,10 +25,10 @@ public class T1_ForgotPassword extends BaseClass {
 		
 		WebElement email=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/li[1]/input"));
 		email.sendKeys("Viveksale123@gmail.com");
+		System.out.println("Email entered: " + email.getAttribute("value"));
 		
 		WebElement Submit=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/li[2]/button"));
-		Submit.click();
-		Thread.sleep(2000);
+		clickWithPause(Submit);
 		
 		WebElement resend_a_new_code=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/ul/li[2]/span/a"));
 		resend_a_new_code.click();

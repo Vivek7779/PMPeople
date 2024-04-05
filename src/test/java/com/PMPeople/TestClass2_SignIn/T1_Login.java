@@ -22,9 +22,11 @@ public class T1_Login extends BaseClass  {
 		 
 		WebElement Profile=driver.findElement(By.xpath("//*[@id=\"headerbarDark\"]/div/ul/li[6]/a/span"));
 		clickWithPause(Profile);
+		System.out.println("Profile entered: " + Profile.getAttribute("value"));
 		
 		WebElement EditProfile=driver.findElement(By.xpath("//*[@id=\"headerbarDark\"]/div/ul/li[6]/div/ul/li[6]/a"));
 		clickWithPause(EditProfile);
+		System.out.println("Edit Profile entered: " + EditProfile.getAttribute("value"));
 		
 		WebElement Logout=driver.findElement(By.xpath("//*[@id=\"headerbarDark\"]/div/ul/li[6]/div/button"));
 		clickWithPause(Logout);

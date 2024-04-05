@@ -20,16 +20,19 @@ public class T3_SignUp_with_registered_credentials extends BaseClass {
 	
 	WebElement FirstName=driver.findElement(By.name("Fname"));
 	FirstName.sendKeys("Vivek");
+	System.out.println("FirstName entered: " + FirstName.getAttribute("value"));
 	
 	WebElement LastName=driver.findElement(By.name("Lname"));
 	LastName.sendKeys("Sale");
+	System.out.println("LastName entered: " + LastName.getAttribute("value"));
 	
 	WebElement Email=driver.findElement(By.name("Email"));
 	Email.sendKeys("Viveksale123@gmail.com");
+	System.out.println("Email entered: " + Email.getAttribute("value"));
 	
 	WebElement Password=driver.findElement(By.name("Password"));	
 	Password.sendKeys("Vivek@123");
-	
+	System.out.println("Password entered: " + Password.getAttribute("value"));
 	
 	WebElement Country=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/div/div[5]/select"));
 	clickWithPause(Country);
