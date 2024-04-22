@@ -1,227 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="11" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-05T17:06:15 IST" name="Suite" finished-at="2024-04-05T17:10:00 IST" duration-ms="225773">
+  <suite started-at="2024-04-19T13:03:59 IST" name="Suite" finished-at="2024-04-19T13:04:58 IST" duration-ms="59101">
     <groups>
     </groups>
-    <test started-at="2024-04-05T17:06:15 IST" name="Test" finished-at="2024-04-05T17:10:00 IST" duration-ms="225773">
-      <class name="com.PMPeople.TestClass1_SignUp.T5_NewSignUp">
-        <test-method signature="Signup()[pri:0, instance:com.PMPeople.TestClass1_SignUp.T5_NewSignUp@30c15d8b]" started-at="2024-04-05T17:06:43 IST" name="Signup" finished-at="2024-04-05T17:06:52 IST" duration-ms="9096" status="PASS">
+    <test started-at="2024-04-19T13:03:59 IST" name="Test" finished-at="2024-04-19T13:04:58 IST" duration-ms="59101">
+      <class name="com.PMPeople.TestClass9_PortfolioManager.T1_AddingProjectWithCode">
+        <test-method signature="addingProjectWithCode()[pri:0, instance:com.PMPeople.TestClass9_PortfolioManager.T1_AddingProjectWithCode@a1153bc]" started-at="2024-04-19T13:03:59 IST" name="addingProjectWithCode" finished-at="2024-04-19T13:04:30 IST" duration-ms="30468" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Signup -->
-      </class> <!-- com.PMPeople.TestClass1_SignUp.T5_NewSignUp -->
-      <class name="com.PMPeople.TestClass6_ResourceManager.T1_AddResourcePool">
-        <test-method signature="addResourcePool()[pri:0, instance:com.PMPeople.TestClass6_ResourceManager.T1_AddResourcePool@411f53a0]" started-at="2024-04-05T17:08:14 IST" name="addResourcePool" finished-at="2024-04-05T17:08:38 IST" duration-ms="23697" status="PASS">
+        </test-method> <!-- addingProjectWithCode -->
+      </class> <!-- com.PMPeople.TestClass9_PortfolioManager.T1_AddingProjectWithCode -->
+      <class name="com.PMPeople.TestClass8_ProgramManager.T1_AddingProjectwithCode">
+        <test-method signature="addingProjectwithCode()[pri:0, instance:com.PMPeople.TestClass8_ProgramManager.T1_AddingProjectwithCode@77888435]" started-at="2024-04-19T13:04:30 IST" name="addingProjectwithCode" finished-at="2024-04-19T13:04:58 IST" duration-ms="28561" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addResourcePool -->
-      </class> <!-- com.PMPeople.TestClass6_ResourceManager.T1_AddResourcePool -->
-      <class name="com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool">
-        <test-method signature="ddingExistingContractorToResourcePool()[pri:0, instance:com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool@2b71e916]" started-at="2024-04-05T17:08:38 IST" name="ddingExistingContractorToResourcePool" finished-at="2024-04-05T17:08:58 IST" duration-ms="20107" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element is not clickable at point (694, 930)
-  (Session info: chrome=123.0.6312.105)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7dee6bfb1e0ebc2e93d57124aed96314, clickElement {id=f.1DF5D4D8A0DDA871397CA2FE632445B0.d.D51AADE57F63BDB8A0EC1D799E5DAA2C.e.2072}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56983}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56983/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7dee6bfb1e0ebc2e93d57124aed96314)] -> xpath: //*[@id="tab_POOLDATA"]/div/div/div[1]/div[6]/div/button[2]]
-Session ID: 7dee6bfb1e0ebc2e93d57124aed96314]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (694, 930)
-  (Session info: chrome=123.0.6312.105)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7dee6bfb1e0ebc2e93d57124aed96314, clickElement {id=f.1DF5D4D8A0DDA871397CA2FE632445B0.d.D51AADE57F63BDB8A0EC1D799E5DAA2C.e.2072}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56983}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56983/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7dee6bfb1e0ebc2e93d57124aed96314)] -> xpath: //*[@id="tab_POOLDATA"]/div/div/div[1]/div[6]/div/button[2]]
-Session ID: 7dee6bfb1e0ebc2e93d57124aed96314
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at Resources.BaseClass.clickWithPause(BaseClass.java:56)
-at com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool.ddingExistingContractorToResourcePool(T2_AddingExistingContractorToResourcePool.java:39)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ddingExistingContractorToResourcePool -->
-      </class> <!-- com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool -->
-      <class name="com.PMPeople.TestClass1_SignUp.T1_SignUp">
-        <test-method signature="Signup()[pri:1, instance:com.PMPeople.TestClass1_SignUp.T1_SignUp@5e0e82ae]" started-at="2024-04-05T17:06:52 IST" name="Signup" finished-at="2024-04-05T17:07:11 IST" duration-ms="19104" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Signup -->
-      </class> <!-- com.PMPeople.TestClass1_SignUp.T1_SignUp -->
-      <class name="com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount">
-        <test-method signature="deactivate()[pri:0, instance:com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount@36fc695d]" started-at="2024-04-05T17:08:58 IST" name="deactivate" finished-at="2024-04-05T17:09:16 IST" duration-ms="17947" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button type="" class="btn btn-primary" disabled="">...</button> is not clickable at point (208, 289). Other element would receive the click: <div class="mt-2">...</div>
-  (Session info: chrome=123.0.6312.105)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cc40128170287961edeaf5fa93aef4ff, clickElement {id=f.B864B2371F79E96A61BA38A1DC44D407.d.933CA3CD921A6CBB0534DFF1FC0817C6.e.2252}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57039/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cc40128170287961edeaf5fa93aef4ff)] -> xpath: //*[@id="root"]/body/main/div[3]/div/div/div[3]/button]
-Session ID: cc40128170287961edeaf5fa93aef4ff]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="" class="btn btn-primary" disabled="">...</button> is not clickable at point (208, 289). Other element would receive the click: <div class="mt-2">...</div>
-  (Session info: chrome=123.0.6312.105)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [cc40128170287961edeaf5fa93aef4ff, clickElement {id=f.B864B2371F79E96A61BA38A1DC44D407.d.933CA3CD921A6CBB0534DFF1FC0817C6.e.2252}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.105, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\PLUSIN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57039}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57039/devtoo..., se:cdpVersion: 123.0.6312.105, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (cc40128170287961edeaf5fa93aef4ff)] -> xpath: //*[@id="root"]/body/main/div[3]/div/div/div[3]/button]
-Session ID: cc40128170287961edeaf5fa93aef4ff
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at Resources.BaseClass.clickWithPause(BaseClass.java:56)
-at com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount.deactivate(T1_DeactivateAccount.java:33)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deactivate -->
-      </class> <!-- com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount -->
-      <class name="com.PMPeople.TestClass4_EditProfile.T1_ChangePassword">
-        <test-method signature="changePassword()[pri:0, instance:com.PMPeople.TestClass4_EditProfile.T1_ChangePassword@6771beb3]" started-at="2024-04-05T17:07:11 IST" name="changePassword" finished-at="2024-04-05T17:07:39 IST" duration-ms="27834" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- changePassword -->
-      </class> <!-- com.PMPeople.TestClass4_EditProfile.T1_ChangePassword -->
-      <class name="com.PMPeople.TestClass3_ForgotPassword.T1_ForgotPassword">
-        <test-method signature="forgot_password()[pri:6, instance:com.PMPeople.TestClass3_ForgotPassword.T1_ForgotPassword@13c9d689]" started-at="2024-04-05T17:09:41 IST" name="forgot_password" finished-at="2024-04-05T17:09:52 IST" duration-ms="11426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgot_password -->
-      </class> <!-- com.PMPeople.TestClass3_ForgotPassword.T1_ForgotPassword -->
-      <class name="com.PMPeople.TestClass1_SignUp.T2_Checking_with_negative_details">
-        <test-method signature="negativeDetails()[pri:2, instance:com.PMPeople.TestClass1_SignUp.T2_Checking_with_negative_details@6b2ea799]" started-at="2024-04-05T17:08:05 IST" name="negativeDetails" finished-at="2024-04-05T17:08:14 IST" duration-ms="8704" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeDetails -->
-      </class> <!-- com.PMPeople.TestClass1_SignUp.T2_Checking_with_negative_details -->
-      <class name="com.PMPeople.TestClass1_SignUp.T3_SignUp_with_registered_credentials">
-        <test-method signature="signin_with_registered_credentials()[pri:3, instance:com.PMPeople.TestClass1_SignUp.T3_SignUp_with_registered_credentials@3754a4bf]" started-at="2024-04-05T17:09:52 IST" name="signin_with_registered_credentials" finished-at="2024-04-05T17:10:00 IST" duration-ms="8245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signin_with_registered_credentials -->
-      </class> <!-- com.PMPeople.TestClass1_SignUp.T3_SignUp_with_registered_credentials -->
-      <class name="com.PMPeople.TestClass2_SignIn.T1_Login2_demo">
-        <test-method signature="Login()[pri:0, instance:com.PMPeople.TestClass2_SignIn.T1_Login2_demo@28701274]" started-at="2024-04-05T17:09:16 IST" name="Login" finished-at="2024-04-05T17:09:41 IST" duration-ms="25199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-      </class> <!-- com.PMPeople.TestClass2_SignIn.T1_Login2_demo -->
-      <class name="com.PMPeople.TestClass4_EditProfile.T2_ChangeName">
-        <test-method signature="changeNameUnderProfile()[pri:0, instance:com.PMPeople.TestClass4_EditProfile.T2_ChangeName@51399530]" started-at="2024-04-05T17:07:39 IST" name="changeNameUnderProfile" finished-at="2024-04-05T17:08:05 IST" duration-ms="26243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- changeNameUnderProfile -->
-      </class> <!-- com.PMPeople.TestClass4_EditProfile.T2_ChangeName -->
-      <class name="com.PMPeople.TestClass1_SignUp.T4_ChangingName_Country_FromSignUp">
-        <test-method signature="T4ChangingName_FromSignUp()[pri:4, instance:com.PMPeople.TestClass1_SignUp.T4_ChangingName_Country_FromSignUp@2d3379b4]" started-at="2024-04-05T17:06:33 IST" name="T4ChangingName_FromSignUp" finished-at="2024-04-05T17:06:43 IST" duration-ms="9476" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- T4ChangingName_FromSignUp -->
-      </class> <!-- com.PMPeople.TestClass1_SignUp.T4_ChangingName_Country_FromSignUp -->
-      <class name="com.PMPeople.TestClass2_SignIn.T1_Login">
-        <test-method signature="Login()[pri:0, instance:com.PMPeople.TestClass2_SignIn.T1_Login@41d477ed]" started-at="2024-04-05T17:06:15 IST" name="Login" finished-at="2024-04-05T17:06:33 IST" duration-ms="18529" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-      </class> <!-- com.PMPeople.TestClass2_SignIn.T1_Login -->
+        </test-method> <!-- addingProjectwithCode -->
+      </class> <!-- com.PMPeople.TestClass8_ProgramManager.T1_AddingProjectwithCode -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

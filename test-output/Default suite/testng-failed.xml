@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PMPeople.TestClass1_SignUp.T2_Checking_with_negative_details">
+      <class name="com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool">
         <methods>
-          <include name="negativeDetails"/>
+          <include name="ddingExistingContractorToResourcePool"/>
         </methods>
-      </class> <!-- com.PMPeople.TestClass1_SignUp.T2_Checking_with_negative_details -->
+      </class> <!-- com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -52,8 +52,8 @@ public class T5_NewSignUp extends BaseClass{
 		TermsandCondition.click();
 		
 		WebElement SignUp=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/div/li/button"));
-		SignUp.click();
-		Thread.sleep(1000);
+		clickWithPause(SignUp);
+		Thread.sleep(2000);
 		
 		System.out.println("Sign up successful");
 		driver.quit();

@@ -20,7 +20,7 @@ public class T1_AddResourcePool extends BaseClass{
 		WebElement ResourceManager=driver.findElement(By.xpath("/html/body/div/body/main/aside/nav/div/div[2]/div/ul/li[5]/a"));
 		clickWithPause(ResourceManager);
 		
-		WebElement AddResourcePool=driver.findElement(By.xpath("//*[@id=\"projectHeader\"]/div[6]/button"));
+		WebElement AddResourcePool=driver.findElement(By.xpath("//*[@id=\"projectHeader\"]/div[5]/button"));
 		clickWithPause(AddResourcePool);
 		
 		WebElement ResourcePoolName=driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/form/div/div[1]/input"));

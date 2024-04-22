@@ -3,16 +3,16 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool">
+      <class name="com.PMPeople.TestClass8_ProgramManager.T1_AddingProjectwithCode">
         <methods>
-          <include name="ddingExistingContractorToResourcePool"/>
+          <include name="addingProjectwithCode"/>
         </methods>
-      </class> <!-- com.PMPeople.TestClass6_ResourceManager.T2_AddingExistingContractorToResourcePool -->
-      <class name="com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount">
+      </class> <!-- com.PMPeople.TestClass8_ProgramManager.T1_AddingProjectwithCode -->
+      <class name="com.PMPeople.TestClass9_PortfolioManager.T1_AddingProjectWithCode">
         <methods>
-          <include name="deactivate"/>
+          <include name="addingProjectWithCode"/>
         </methods>
-      </class> <!-- com.PMPeople.TestClass5_DeactivateAccount.T1_DeactivateAccount -->
+      </class> <!-- com.PMPeople.TestClass9_PortfolioManager.T1_AddingProjectWithCode -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

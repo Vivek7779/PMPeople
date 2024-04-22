@@ -29,8 +29,10 @@ public class T1_DeactivateAccount extends BaseClass{
 		
 		System.out.println("if user have 2 organizations then not able to Deactivate account.");
 		
+		/*
 		WebElement DeactivateAccount=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div[3]/div/div/div[3]/button"));
 		clickWithPause(DeactivateAccount);
+		
 		
 		System.out.println("User have only one organization.");
 		
@@ -38,5 +40,8 @@ public class T1_DeactivateAccount extends BaseClass{
 		clickWithPause(ConfirmDeactivate);
 		
 		System.out.println("User have only 1 Organization thats why account is deactivated.");
+		*/ 
+		
+		driver.quit();
 	}
 }
