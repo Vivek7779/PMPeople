@@ -19,7 +19,7 @@ public class T2_AddingExistingContractorToResourcePool extends BaseClass {
 		
 		driverinitialize();
 		maximizeWindow();
-		performLogin("vivek.sale@plusinfosys.com", "Vivek@123");
+		performLogin("admin11@dummy.com", "Admin@123");
 		
 		WebElement ResourceManager=driver.findElement(By.xpath("/html/body/div/body/main/aside/nav/div/div[2]/div/ul/li[5]/a"));
 		clickWithPause(ResourceManager);
@@ -28,7 +28,7 @@ public class T2_AddingExistingContractorToResourcePool extends BaseClass {
 		clickWithPause(SelectResourcePoolDropdown);
 		
 		Select dropdown=new Select(SelectResourcePoolDropdown);
-		dropdown.selectByIndex(6);
+		dropdown.selectByIndex(2);
 		driver.switchTo().activeElement().click();
 		
 		WebElement Pooldata=driver.findElement(By.xpath("//*[@id=\"tabview\"]/div/ul/li[1]/div"));
@@ -36,7 +36,7 @@ public class T2_AddingExistingContractorToResourcePool extends BaseClass {
 		
 		Thread.sleep(3000);
                                                                       
-		WebElement AddExistingContractor = driver.findElement(By.xpath("//*[@id=\"tab_POOLDATA\"]/div/div/div[1]/div[6]/div/button[2]"));
+		WebElement AddExistingContractor = driver.findElement(By.xpath("//*[@id=\"tab_POOLDATA\"]/div/div/div[1]/div[4]/div/button[2]"));
 	    JavascriptExecutor executor = (JavascriptExecutor) driver;
 	    executor.executeScript("arguments[0].scrollIntoView(true);", AddExistingContractor);
 	    Thread.sleep(1000); // Adjust delay as needed

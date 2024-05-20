@@ -20,13 +20,13 @@ public class T2_CreateBusinessUnitMultipleTime extends BaseClass {
 		WebElement FuinctionalManager=driver.findElement(By.xpath("/html/body/div/body/main/aside/nav/div/div[2]/div/ul/li[9]/a"));
 		clickWithPause(FuinctionalManager);
 		
-		WebElement AddBusinessUnit=driver.findElement(By.xpath("//*[@id=\"projectHeader\"]/div[3]/div/button"));
+		WebElement AddBusinessUnit=driver.findElement(By.xpath("//*[@id=\"projectHeader\"]/div[4]/div/button"));
 		clickWithPause(AddBusinessUnit);
 		
-		WebElement Name=driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/form/div/div[1]/input"));
+		WebElement Name=driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/form/div/div[1]/div/input"));
 		clickWithPause(Name);
 		Name.sendKeys(Keys.CONTROL+"a",Keys.BACK_SPACE);
-		Name.sendKeys("BU 1");
+		Name.sendKeys("BU 30-04");
 		System.out.println("BU Name entered: " + Name.getAttribute("value"));
 		
 		WebElement Description=driver.findElement(By.xpath("//*[@id=\"desc\"]"));
@@ -44,6 +44,7 @@ public class T2_CreateBusinessUnitMultipleTime extends BaseClass {
 		clickWithPause(SelectBusinessUnitDropdown);
 		
 		Thread.sleep(3000);
+		System.out.println("Here we after entering details we click on save button 2 times , so 2 BUs created with same details.");
 		driver.quit();
 	}
 }

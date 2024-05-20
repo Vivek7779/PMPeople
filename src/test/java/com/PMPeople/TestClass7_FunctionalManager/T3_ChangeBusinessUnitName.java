@@ -37,15 +37,18 @@ public class T3_ChangeBusinessUnitName extends BaseClass {
 		Name.sendKeys(Keys.CONTROL+"a",Keys.BACK_SPACE);
 		Name.sendKeys("BU 243");
 		System.out.println("BU Name entered: " + Name.getAttribute("value"));
+		Thread.sleep(2000);
 		
-		WebElement Description=driver.findElement(By.xpath("//*[@id=\"desc\"]"));
+		WebElement Description=driver.findElement(By.xpath("//*[@id=\"tab_BUDATA\"]/div[1]/form/div[2]/div[3]/div/textarea[1]"));
 		clickWithPause(BusinessUnitData);
 		Description.sendKeys(Keys.CONTROL+"a",Keys.BACK_SPACE);
-		Description.sendKeys("Test 243");
+		Description.sendKeys("Test 244");
 		System.out.println("BU Description entered: " + Description.getAttribute("value"));
+		Thread.sleep(2000);
 		
-		WebElement Save=driver.findElement(By.xpath("//*[@id=\"tab_BUDATA\"]/div[1]/form/div[1]/div/div[2]/button"));
+		WebElement Save=driver.findElement(By.xpath("//*[@id=\"tab_BUDATA\"]/div[1]/form/div[1]/div/div[2]"));
 		clickWithPause(Save);                        
+		Thread.sleep(2000);
 		
 		driver.navigate().refresh();
 		Thread.sleep(3000);
@@ -56,7 +59,7 @@ public class T3_ChangeBusinessUnitName extends BaseClass {
 		//Create a Select object for the dropdown
 		Select dropdown1=new Select(SelectBusinessUnitDropdown1);
 		
-		dropdown1.selectByIndex(4);
+		dropdown1.selectByIndex(1);
 		driver.switchTo().activeElement().click();
 		
 		WebElement BusinessUnitData1=driver.findElement(By.xpath("//*[@id=\"tabview\"]/div/ul/li[1]/a"));

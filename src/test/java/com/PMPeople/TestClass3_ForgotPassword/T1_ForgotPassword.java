@@ -10,16 +10,16 @@ import org.testng.annotations.Test;
 import Resources.BaseClass;
 
 public class T1_ForgotPassword extends BaseClass {
-
-	@Test (priority = 6)
+                                                                                        //:"xpath","selector":"//*[@id="root"]/body/main/div/div/div/div/ul/form/li[2]/a"}
+	@Test 
 	public void forgot_password () throws IOException, InterruptedException {
 		
 		driverinitialize();
+		maximizeWindow();
 		driver.get("http://115.244.148.118:8195/signin");
-		driver.manage().window().maximize();
 		Thread.sleep(2000);
 		
-		WebElement ForgotPassword=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/li[2]/a"));
+		WebElement ForgotPassword=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div/div/div/div/ul/form/li[2]/div/a"));
 		Thread.sleep(1000);
 		ForgotPassword.click();
 		

@@ -23,14 +23,11 @@ public class T1_AddBusinessUnit extends BaseClass{
 		clickWithPause(AddBusinessUnit);                      
 		
 		WebElement Save=driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/form/div/div[3]/div[2]/button"));
-		clickWithPause(Save);
 		
-		WebElement SelectBusinessUnitDropdown=driver.findElement(By.xpath("//*[@id=\"floatingSelect\"]"));
-		clickWithPause(SelectBusinessUnitDropdown);
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
-		System.out.println("Without giving any details Business Unit Created");
+		System.out.println("Save button disabled,means without giving any details resource pool not created");
 		driver.quit();
 		
 	}

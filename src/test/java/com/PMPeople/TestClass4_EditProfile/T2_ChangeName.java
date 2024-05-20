@@ -27,11 +27,11 @@ public class T2_ChangeName extends BaseClass {
 		Thread.sleep(1000);
 		EditProfile.click();
 		
-		WebElement FirstName=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div[3]/div/div[2]/div[2]/div/form/div/div[1]/input"));
+		WebElement FirstName=driver.findElement(By.xpath("//*[@id=\"root\"]/body/main/div[3]/div/div[2]/div[2]/div/form/div/div[1]/div/input"));
 		clickWithPause(FirstName);
 	    FirstName.sendKeys(Keys.CONTROL+"a",Keys.DELETE);
 		Thread.sleep(1000);
-		FirstName.sendKeys("Vive");
+		FirstName.sendKeys("Vive");                    
 		FirstName.sendKeys(Keys.TAB,Keys.BACK_SPACE);
 		driver.switchTo().activeElement().sendKeys("Sal");
 		
