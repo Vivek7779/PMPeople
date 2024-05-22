@@ -52,16 +52,16 @@ public class PfM extends BaseClass {
 	  //Define
 	  WebElement Define=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[1]/div/ul/li[1]"));
 	  clickWithPause(Define);
-	  
+/*	  
 	  //Copy to clipboard.
-	  WebElement PrivatProjectCode=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[2]/div[2]/div/div/button"));
+	  WebElement PrivatProjectCode=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[2]/div[2]/button"));
 	  PrivatProjectCode.click();
 	
-	  //Edit Project Name.
-	  WebElement ProjectName=driver.findElement(By.xpath("//*[@id=\"Project Name\"]"));
-	  ProjectName.click();
-	  ProjectName.sendKeys("Test_PN",Keys.ENTER);
-	  Thread.sleep(2000);
+	  //Project ID.
+	  WebElement ProjectID=driver.findElement(By.xpath("//*[@id=\"Project ID\"]"));
+	  ProjectID.click();
+	  ProjectID.sendKeys("1",Keys.ENTER);
+	  Thread.sleep(3000);  
 	  
 	  //Project Short Name.
 	  WebElement ProjectShortName=driver.findElement(By.xpath("//*[@id=\"Project Short Name\"]"));
@@ -69,51 +69,60 @@ public class PfM extends BaseClass {
 	  ProjectShortName.sendKeys("Test_PSN",Keys.ENTER);
 	  Thread.sleep(3000);
 	  
+	  //Edit Project Name.
+	  WebElement ProjectName=driver.findElement(By.xpath("//*[@id=\"Project Name\"]"));
+	  ProjectName.click();
+	  ProjectName.sendKeys("Test_PN",Keys.ENTER);
+	  Thread.sleep(2000);
+	  
+	  //Change Project State
+	  WebElement ProjectState=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[4]/div/select"));
+	  ProjectState.click();
+	  Select S=new Select(ProjectState);
+	  S.selectByIndex(2);
+	  ProjectState.sendKeys(Keys.ENTER);
+ 
 	  //Client.
-	  WebElement Client=driver.findElement(By.xpath("/html/body/div/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[3]/div/select"));
-	  ProjectShortName.click();
+	  WebElement Client=driver.findElement(By.name("Client_Name"));
+	  Client.click();
       Select Clientdrop=new Select(Client);
-      Clientdrop.selectByIndex(1);
-      
-      WebElement Save=driver.findElement(By.xpath("/html/body/div/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
+      Clientdrop.selectByIndex(2);
+      Client.sendKeys(Keys.ENTER);
+      WebElement Save=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save.click();
-    	
-      //Contract Type.
-	  WebElement ContractType=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[4]/div/select"));
-	  ContractType.click();
-      Select Contractdrop=new Select(Client);
-      Contractdrop.selectByIndex(4);
-      WebElement Save1=driver.findElement(By.xpath("/html/body/div/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
-      Save1.click();
-      
-      //Project ID.
-	  WebElement ProjectID=driver.findElement(By.xpath("//*[@id=\"Project ID\"]"));
-	  ProjectID.click();
-	  ProjectID.sendKeys("1",Keys.ENTER);
-	  Thread.sleep(3000);   
+ */	   	
+      //Contract Type.(this option is not there ,field changes as Request Name)
+	  WebElement RequestName=driver.findElement(By.xpath("//*[@id=\"Request Name\"]"));
+	  RequestName.click();
+      RequestName.sendKeys(Keys.CONTROL + "A",Keys.DELETE,"RN");
+      WebElement Save1=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
+      Save1.click(); 
 	  
 	  //Project Manager.
 	  WebElement ProjectManager=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[6]/div/div[2]/select"));
 	  ProjectManager.click();
       Select PMdrop=new Select(ProjectManager);
       PMdrop.selectByIndex(4);
-      WebElement Save2=driver.findElement(By.xpath("/html/body/div/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
+      ProjectManager.sendKeys(Keys.ENTER);
+      WebElement Save2=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save2.click();	  
 	  
       //Requester.
 	  WebElement Requester=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[7]/div/div[2]/select"));
 	  Requester.click();
-      Select Requesterdrop=new Select(ProjectManager);
+      Select Requesterdrop=new Select(Requester);
       Requesterdrop.selectByIndex(4);
-      WebElement Save3=driver.findElement(By.xpath("/html/body/div/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
+      Requester.sendKeys(Keys.ENTER);
+      WebElement Save3=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save3.click();	  	  
 
       //Sponsor.
 	  WebElement Sponsor=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[7]/div/div[2]/select"));
 	  Sponsor.click();
-      Select Sponsordrop=new Select(ProjectManager);
+      Select Sponsordrop=new Select(Sponsor);
       Sponsordrop.selectByIndex(3);
-      WebElement Save4=driver.findElement(By.xpath("/html/body/div/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
+      Sponsor.sendKeys(Keys.ENTER);
+      WebElement Save4=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save4.click();
 	  
       //Value.
