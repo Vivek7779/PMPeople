@@ -90,49 +90,57 @@ public class PfM extends BaseClass {
       Client.sendKeys(Keys.ENTER);
       WebElement Save=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save.click();
- */	   	
-      //Contract Type.(this option is not there ,field changes as Request Name)
-	  WebElement RequestName=driver.findElement(By.xpath("//*[@id=\"Request Name\"]"));
-	  RequestName.click();
-      RequestName.sendKeys(Keys.CONTROL + "A",Keys.DELETE,"RN");
-      WebElement Save1=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
-      Save1.click(); 
-	  
+ 	
+   
 	  //Project Manager.
-	  WebElement ProjectManager=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[6]/div/div[2]/select"));
+	  WebElement ProjectManager=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[7]/div/div[2]/select"));
 	  ProjectManager.click();
       Select PMdrop=new Select(ProjectManager);
-      PMdrop.selectByIndex(4);
+      PMdrop.selectByIndex(3);
       ProjectManager.sendKeys(Keys.ENTER);
       WebElement Save2=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save2.click();	  
-	  
+  	  
       //Requester.
-	  WebElement Requester=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[7]/div/div[2]/select"));
+	  WebElement Requester=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[8]/div/div[2]/select"));
 	  Requester.click();
+	  Thread.sleep(1000);
       Select Requesterdrop=new Select(Requester);
-      Requesterdrop.selectByIndex(4);
+      Requesterdrop.selectByVisibleText("Ambit Proveedor");
+      Thread.sleep(1000);
       Requester.sendKeys(Keys.ENTER);
       WebElement Save3=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save3.click();	  	  
-
+	 
       //Sponsor.
-	  WebElement Sponsor=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[7]/div/div[2]/select"));
+	  WebElement Sponsor=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[9]/div/div[2]/select"));
 	  Sponsor.click();
       Select Sponsordrop=new Select(Sponsor);
       Sponsordrop.selectByIndex(3);
       Sponsor.sendKeys(Keys.ENTER);
       WebElement Save4=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save4.click();
+
+	  //Baseline Start
+	  WebElement BaselineStart=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[11]/div[1]/div/div/input"));
+	  BaselineStart.click();
+	  BaselineStart.sendKeys(Keys.CONTROL + "A",Keys.DELETE,"2024-05-23",Keys.ENTER);
+	  BaselineStart.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB);
 	  
-      //Value.
-	  WebElement Value=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[13]/div/input"));
+	  //Baseline Finish
+	  WebElement BaselineFinish=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[13]/div[1]/div"));
+	  BaselineFinish.click();
+	  BaselineFinish.sendKeys("2024-12-31");
+ */	  
+	 
+	  //Value.
+	  WebElement Value=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[15]/div/input"));
 	  Value.click();
 	  Value.sendKeys("5",Keys.ENTER);
 	  Thread.sleep(3000); 
-	  
+	   
 	  //Size.
-	  WebElement Size=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[14]/div/input"));
+	  WebElement Size=driver.findElement(By.cssSelector(""));
 	  Size.click();
 	  Size.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"VXVML",Keys.ENTER);
 	  Thread.sleep(3000); 	  
