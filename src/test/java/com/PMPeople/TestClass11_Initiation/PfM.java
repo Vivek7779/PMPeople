@@ -4,6 +4,7 @@ package com.PMPeople.TestClass11_Initiation;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -35,9 +36,8 @@ public class PfM extends BaseClass {
 	  //Selecting Project.
 	  WebElement SelectProject=driver.findElement(By.xpath("//div[@class='px-4 py-4 page-body']//div//div[2]//div[1]//select[1]"));
 	  clickWithPause(SelectProject);
-	  
 	  Select ProjectDrop=new Select(SelectProject);
-	  ProjectDrop.selectByIndex(2);
+	  ProjectDrop.selectByIndex(3);
 	  SelectProject.sendKeys(Keys.ESCAPE);
 	  
 	  //Initiation.
@@ -52,26 +52,28 @@ public class PfM extends BaseClass {
 	  //Define
 	  WebElement Define=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[1]/div/ul/li[1]"));
 	  clickWithPause(Define);
-/*	  
+
 	  //Copy to clipboard.
 	  WebElement PrivatProjectCode=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[2]/div[2]/button"));
 	  PrivatProjectCode.click();
 	
 	  //Project ID.
 	  WebElement ProjectID=driver.findElement(By.xpath("//*[@id=\"Project ID\"]"));
-	  ProjectID.click();
-	  ProjectID.sendKeys("1",Keys.ENTER);
-	  Thread.sleep(3000);  
+	  ProjectID.clear(); // Clear the existing value
+	  ProjectID.sendKeys("7985369", Keys.ENTER);
 	  
 	  //Project Short Name.
 	  WebElement ProjectShortName=driver.findElement(By.xpath("//*[@id=\"Project Short Name\"]"));
 	  ProjectShortName.click();
+	  ProjectShortName.clear();
 	  ProjectShortName.sendKeys("Test_PSN",Keys.ENTER);
 	  Thread.sleep(3000);
 	  
 	  //Edit Project Name.
 	  WebElement ProjectName=driver.findElement(By.xpath("//*[@id=\"Project Name\"]"));
 	  ProjectName.click();
+	  ProjectName.clear();
+	  ProjectName.sendKeys(Keys.CONTROL+ "A",Keys.DELETE,"1",Keys.ENTER);
 	  ProjectName.sendKeys("Test_PN",Keys.ENTER);
 	  Thread.sleep(2000);
 	  
@@ -91,7 +93,6 @@ public class PfM extends BaseClass {
       WebElement Save=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save.click();
  	
-   
 	  //Project Manager.
 	  WebElement ProjectManager=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[7]/div/div[2]/select"));
 	  ProjectManager.click();
@@ -124,23 +125,33 @@ public class PfM extends BaseClass {
 	  //Baseline Start
 	  WebElement BaselineStart=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[11]/div[1]/div/div/input"));
 	  BaselineStart.click();
-	  BaselineStart.sendKeys(Keys.CONTROL + "A",Keys.DELETE,"2024-05-23",Keys.ENTER);
-	  BaselineStart.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB);
+	  BaselineStart.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"2024-05-23",Keys.ENTER);
+	  //BaselineStart.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB);
 	  
+	  //BaselineDuration
+	  WebElement BaselineDuration=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[12]/div/input"));
+	  BaselineDuration.sendKeys(Keys.CONTROL+ "A",Keys.DELETE,"89.09",Keys.ENTER);
+ 
 	  //Baseline Finish
 	  WebElement BaselineFinish=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[13]/div[1]/div"));
 	  BaselineFinish.click();
 	  BaselineFinish.sendKeys("2024-12-31");
- */	  
-	 
+	  BaselineFinish.sendKeys(Keys.PAGE_DOWN);
+	  
+	  // Scroll down by 500 pixels
+	  JavascriptExecutor js = (JavascriptExecutor) driver;
+	  js.executeScript("window.scrollBy(0, 500)");
+
 	  //Value.
 	  WebElement Value=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[15]/div/input"));
+	  Value.sendKeys(Keys.PAGE_DOWN);
+	  Thread.sleep(2000);
 	  Value.click();
-	  Value.sendKeys("5",Keys.ENTER);
+	  Value.sendKeys("7",Keys.ENTER);
 	  Thread.sleep(3000); 
-	   
+	  
 	  //Size.
-	  WebElement Size=driver.findElement(By.cssSelector(""));
+	  WebElement Size=driver.findElement(By.cssSelector("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[16]/div/input"));
 	  Size.click();
 	  Size.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"VXVML",Keys.ENTER);
 	  Thread.sleep(3000); 	  
@@ -156,6 +167,7 @@ public class PfM extends BaseClass {
 	  ProjectComment.click();
 	  ProjectComment.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"67",Keys.ENTER);
 	  Thread.sleep(3000); 
+	  
 	  
 	  driver.quit();
 	  
