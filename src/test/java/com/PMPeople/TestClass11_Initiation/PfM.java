@@ -1,13 +1,17 @@
 package com.PMPeople.TestClass11_Initiation;
 
 
+import org.testng.annotations.Test;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import Resources.BaseClass;
@@ -37,7 +41,7 @@ public class PfM extends BaseClass {
 	  WebElement SelectProject=driver.findElement(By.xpath("//div[@class='px-4 py-4 page-body']//div//div[2]//div[1]//select[1]"));
 	  clickWithPause(SelectProject);
 	  Select ProjectDrop=new Select(SelectProject);
-	  ProjectDrop.selectByIndex(3);
+	  ProjectDrop.selectByIndex(2);
 	  SelectProject.sendKeys(Keys.ESCAPE);
 	  
 	  //Initiation.
@@ -52,50 +56,56 @@ public class PfM extends BaseClass {
 	  //Define
 	  WebElement Define=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[1]/div/ul/li[1]"));
 	  clickWithPause(Define);
-
+/*
 	  //Copy to clipboard.
 	  WebElement PrivatProjectCode=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[2]/div[2]/button"));
-	  PrivatProjectCode.click();
+	  clickWithPause(PrivatProjectCode);
 	
 	  //Project ID.
 	  WebElement ProjectID=driver.findElement(By.xpath("//*[@id=\"Project ID\"]"));
-	  ProjectID.clear(); // Clear the existing value
+      clickWithPause(ProjectID);
+	  ProjectID.sendKeys(Keys.CONTROL + "A",Keys.DELETE);
 	  ProjectID.sendKeys("7985369", Keys.ENTER);
 	  
 	  //Project Short Name.
 	  WebElement ProjectShortName=driver.findElement(By.xpath("//*[@id=\"Project Short Name\"]"));
-	  ProjectShortName.click();
-	  ProjectShortName.clear();
-	  ProjectShortName.sendKeys("Test_PSN",Keys.ENTER);
+	  clickWithPause(ProjectShortName);
+	  ProjectShortName.sendKeys(Keys.CONTROL + "A",Keys.DELETE);
+	  ProjectShortName.sendKeys("Under_Testing_Project",Keys.ENTER);
 	  Thread.sleep(3000);
 	  
-	  //Edit Project Name.
-	  WebElement ProjectName=driver.findElement(By.xpath("//*[@id=\"Project Name\"]"));
-	  ProjectName.click();
-	  ProjectName.clear();
-	  ProjectName.sendKeys(Keys.CONTROL+ "A",Keys.DELETE,"1",Keys.ENTER);
-	  ProjectName.sendKeys("Test_PN",Keys.ENTER);
-	  Thread.sleep(2000);
-	  
+	  //Edit Project Name
+	  WebElement projectName = driver.findElement(By.xpath("//*[@id=\"Project Name\"]"));
+	  projectName.click();
+	  projectName.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, "1", Keys.ENTER);
+	  projectName.sendKeys("Test_PN", Keys.ENTER);
+
+	  // Scroll down to the element to ensure it is in view
+	  Actions actions = new Actions(driver);
+	  actions.moveToElement(projectName).sendKeys(Keys.PAGE_DOWN).build().perform();
+  
 	  //Change Project State
 	  WebElement ProjectState=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[4]/div/select"));
 	  ProjectState.click();
 	  Select S=new Select(ProjectState);
 	  S.selectByIndex(2);
 	  ProjectState.sendKeys(Keys.ENTER);
- 
+	  Thread.sleep(2000);
+	  WebElement Save=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]")); 
+      Save.click();
+      Thread.sleep(2000);
+      
 	  //Client.
 	  WebElement Client=driver.findElement(By.name("Client_Name"));
 	  Client.click();
       Select Clientdrop=new Select(Client);
       Clientdrop.selectByIndex(2);
-      Client.sendKeys(Keys.ENTER);
-      WebElement Save=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
-      Save.click();
+      WebElement Save1=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
+      Save1.click();
  	
 	  //Project Manager.
 	  WebElement ProjectManager=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[7]/div/div[2]/select"));
-	  ProjectManager.click();
+	  clickWithPause(ProjectManager);
       Select PMdrop=new Select(ProjectManager);
       PMdrop.selectByIndex(3);
       ProjectManager.sendKeys(Keys.ENTER);
@@ -112,16 +122,18 @@ public class PfM extends BaseClass {
       Requester.sendKeys(Keys.ENTER);
       WebElement Save3=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save3.click();	  	  
-	 
+*/		 
       //Sponsor.
 	  WebElement Sponsor=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[9]/div/div[2]/select"));
 	  Sponsor.click();
       Select Sponsordrop=new Select(Sponsor);
       Sponsordrop.selectByIndex(3);
       Sponsor.sendKeys(Keys.ENTER);
+      Thread.sleep(1500);
       WebElement Save4=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save4.click();
-
+      Thread.sleep(1500);
+      
 	  //Baseline Start
 	  WebElement BaselineStart=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[11]/div[1]/div/div/input"));
 	  BaselineStart.click();
@@ -140,7 +152,7 @@ public class PfM extends BaseClass {
 	  
 	  // Scroll down by 500 pixels
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
-	  js.executeScript("window.scrollBy(0, 500)");
+	  js.executeScript("window.scrollBy(0, 1500)");
 
 	  //Value.
 	  WebElement Value=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[15]/div/input"));
@@ -166,10 +178,9 @@ public class PfM extends BaseClass {
 	  WebElement ProjectComment=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[17]/div/textarea[1]"));
 	  ProjectComment.click();
 	  ProjectComment.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"67",Keys.ENTER);
-	  Thread.sleep(3000); 
-	  
-	  
-	  driver.quit();
+	  //Thread.sleep(3000); 
+	
+	 // driver.quit();
 	  
 	}
 }
