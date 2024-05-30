@@ -13,7 +13,7 @@ public class PgM extends BaseClass {
          driverinitialize();
          maximizeWindow();
          performLogin("admin11@dummy.com", "Admin@123");
-         
+         driver.quit();
 
     }
 }
