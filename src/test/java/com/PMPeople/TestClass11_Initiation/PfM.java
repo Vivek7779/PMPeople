@@ -2,6 +2,9 @@ package com.PMPeople.TestClass11_Initiation;
 
 
 import org.testng.annotations.Test;
+
+import com.fasterxml.jackson.databind.deser.Deserializers.Base;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -41,7 +44,7 @@ public class PfM extends BaseClass {
 	  WebElement SelectProject=driver.findElement(By.xpath("//div[@class='px-4 py-4 page-body']//div//div[2]//div[1]//select[1]"));
 	  clickWithPause(SelectProject);
 	  Select ProjectDrop=new Select(SelectProject);
-	  ProjectDrop.selectByIndex(2);
+	  ProjectDrop.selectByIndex(3);
 	  SelectProject.sendKeys(Keys.ESCAPE);
 	  
 	  //Initiation.
@@ -56,11 +59,17 @@ public class PfM extends BaseClass {
 	  //Define
 	  WebElement Define=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[1]/div/ul/li[1]"));
 	  clickWithPause(Define);
-/*
+
 	  //Copy to clipboard.
 	  WebElement PrivatProjectCode=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[2]/div[2]/button"));
 	  clickWithPause(PrivatProjectCode);
-	
+	  
+	  // Scroll down to the element to ensure it is in view
+	  Actions actions = new Actions(driver);
+	  actions.moveToElement(PrivatProjectCode).sendKeys(Keys.PAGE_DOWN).build().perform();
+	  Thread.sleep(1500);
+
+/*	  
 	  //Project ID.
 	  WebElement ProjectID=driver.findElement(By.xpath("//*[@id=\"Project ID\"]"));
       clickWithPause(ProjectID);
@@ -79,10 +88,6 @@ public class PfM extends BaseClass {
 	  projectName.click();
 	  projectName.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, "1", Keys.ENTER);
 	  projectName.sendKeys("Test_PN", Keys.ENTER);
-
-	  // Scroll down to the element to ensure it is in view
-	  Actions actions = new Actions(driver);
-	  actions.moveToElement(projectName).sendKeys(Keys.PAGE_DOWN).build().perform();
   
 	  //Change Project State
 	  WebElement ProjectState=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[4]/div/select"));
@@ -121,38 +126,36 @@ public class PfM extends BaseClass {
       Thread.sleep(1000);
       Requester.sendKeys(Keys.ENTER);
       WebElement Save3=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
-      Save3.click();	  	  
-*/		 
+       	  
+		 
       //Sponsor.
 	  WebElement Sponsor=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[9]/div/div[2]/select"));
-	  Sponsor.click();
+	  clickWithPause(Sponsor);
       Select Sponsordrop=new Select(Sponsor);
       Sponsordrop.selectByIndex(3);
-      Sponsor.sendKeys(Keys.ENTER);
-      Thread.sleep(1500);
       WebElement Save4=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
-      Save4.click();
-      Thread.sleep(1500);
-      
+      clickWithPause(Save4);
+      //Thread.sleep(1500);
+
 	  //Baseline Start
 	  WebElement BaselineStart=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[11]/div[1]/div/div/input"));
-	  BaselineStart.click();
-	  BaselineStart.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"2024-05-23",Keys.ENTER);
-	  //BaselineStart.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB);
-	  
+	  clickWithPause(BaselineStart);
+	  BaselineStart.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
+	  BaselineStart.sendKeys("2024-05-23",Keys.ENTER);
+	 
 	  //BaselineDuration
 	  WebElement BaselineDuration=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[12]/div/input"));
-	  BaselineDuration.sendKeys(Keys.CONTROL+ "A",Keys.DELETE,"89.09",Keys.ENTER);
- 
+	  BaselineDuration.sendKeys(Keys.CONTROL+ "A",Keys.DELETE);
+	  BaselineDuration.sendKeys("89.09",Keys.ENTER);
+      Thread.sleep(2000);
+ */      
 	  //Baseline Finish
 	  WebElement BaselineFinish=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[13]/div[1]/div"));
-	  BaselineFinish.click();
-	  BaselineFinish.sendKeys("2024-12-31");
-	  BaselineFinish.sendKeys(Keys.PAGE_DOWN);
-	  
-	  // Scroll down by 500 pixels
-	  JavascriptExecutor js = (JavascriptExecutor) driver;
-	  js.executeScript("window.scrollBy(0, 1500)");
+	  clickWithPause(BaselineFinish);
+	  BaselineFinish.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
+	  BaselineFinish.sendKeys("2024-12-31",Keys.ENTER);
+	 
+/*	  
 
 	  //Value.
 	  WebElement Value=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[15]/div/input"));
@@ -179,7 +182,7 @@ public class PfM extends BaseClass {
 	  ProjectComment.click();
 	  ProjectComment.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"67",Keys.ENTER);
 	  //Thread.sleep(3000); 
-	
+*/	
 	 // driver.quit();
 	  
 	}
