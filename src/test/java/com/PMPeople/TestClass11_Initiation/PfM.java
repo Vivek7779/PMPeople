@@ -3,7 +3,6 @@ package com.PMPeople.TestClass11_Initiation;
 
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.databind.deser.Deserializers.Base;
 
 import java.io.IOException;
 
@@ -126,8 +125,7 @@ public class PfM extends BaseClass {
       Thread.sleep(1000);
       Requester.sendKeys(Keys.ENTER);
       WebElement Save3=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
-       	  
-		 
+     
       //Sponsor.
 	  WebElement Sponsor=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[9]/div/div[2]/select"));
 	  clickWithPause(Sponsor);
@@ -148,42 +146,55 @@ public class PfM extends BaseClass {
 	  BaselineDuration.sendKeys(Keys.CONTROL+ "A",Keys.DELETE);
 	  BaselineDuration.sendKeys("89.09",Keys.ENTER);
       Thread.sleep(2000);
- */      
+     
 	  //Baseline Finish
 	  WebElement BaselineFinish=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[13]/div[1]/div"));
 	  clickWithPause(BaselineFinish);
 	  BaselineFinish.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
 	  BaselineFinish.sendKeys("2024-12-31",Keys.ENTER);
-	 
-/*	  
-
+ */ 	  
+	  //Baseline Cost
+	  WebElement Baselinecost=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[14]/div/input"));
+	  clickWithPause(Baselinecost);
+	  Baselinecost.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
+	  Baselinecost.sendKeys("9807.09",Keys.ENTER);
+	  
 	  //Value.
 	  WebElement Value=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[15]/div/input"));
-	  Value.sendKeys(Keys.PAGE_DOWN);
-	  Thread.sleep(2000);
-	  Value.click();
+	  clickWithPause(Value);
+	  Value.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
 	  Value.sendKeys("7",Keys.ENTER);
-	  Thread.sleep(3000); 
-	  
+	  Thread.sleep(2000);
+	 
 	  //Size.
-	  WebElement Size=driver.findElement(By.cssSelector("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[16]/div/input"));
-	  Size.click();
-	  Size.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"VXVML",Keys.ENTER);
-	  Thread.sleep(3000); 	  
+	  WebElement Size=driver.findElement(By.cssSelector("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[16]/div/input"));
+	  clickWithPause(Size);
+	  Size.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
+	  Size.sendKeys("VXVML",Keys.ENTER); 
+	  Thread.sleep(2000);
 	  
 	  //Risk Rate.
-	  WebElement RiskRate=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[13]/div/input"));
-	  RiskRate.click();
-	  RiskRate.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"67",Keys.ENTER);
+	  WebElement RiskRate=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[17]/div/input"));
+	  clickWithPause(RiskRate);
+	  RiskRate.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
+	  RiskRate.sendKeys("67",Keys.ENTER);
 	  Thread.sleep(3000); 	  	  
+	
+	  //Probablity.
+	  WebElement Probablity=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[18]/div/input"));
+	  clickWithPause(Probablity);
+	  Probablity.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
+	  Probablity.sendKeys("89.98",Keys.ENTER);
+	  Thread.sleep(2000);
 	  
 	  //Project Comment.
-	  WebElement ProjectComment=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[4]/div[17]/div/textarea[1]"));
+	  WebElement ProjectComment=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[19]/div/textarea[1]"));
 	  ProjectComment.click();
-	  ProjectComment.sendKeys(Keys.CONTROL+"A",Keys.DELETE,"67",Keys.ENTER);
-	  //Thread.sleep(3000); 
-*/	
-	 // driver.quit();
+	  ProjectComment.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
+	  ProjectComment.sendKeys("67",Keys.ENTER);
+	  Thread.sleep(2000);
+	  
+	  driver.quit();
 	  
 	}
 }
