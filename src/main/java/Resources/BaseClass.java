@@ -18,7 +18,7 @@ public class BaseClass {
 
     public void driverinitialize() throws IOException {
         // Here we gave the path of data.properties File.
-        FileInputStream fis = new FileInputStream("C:\\Users\\Plusinfosys\\eclipse-workspace\\PMPeoplenew\\src\\main\\java\\Resources\\data.properties");
+        FileInputStream fis = new FileInputStream("D:\\Vivek\\Automation Testing\\pmpepople\\PMPeople\\src\\main\\java\\Resources\\data.properties");
 
         // To load properties.
         Properties prop = new Properties();

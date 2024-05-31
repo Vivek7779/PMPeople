@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.junit.Test;
 
+
 import Resources.BaseClass;
 
 public class PgM extends BaseClass {
@@ -14,6 +15,7 @@ public class PgM extends BaseClass {
          maximizeWindow();
          performLogin("admin11@dummy.com", "Admin@123");
          driver.quit();
+
 
     }
 }

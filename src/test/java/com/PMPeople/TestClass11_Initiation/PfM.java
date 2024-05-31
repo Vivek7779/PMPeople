@@ -62,35 +62,32 @@ public class PfM extends BaseClass {
 	  //Copy to clipboard.
 	  WebElement PrivatProjectCode=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[2]/div[2]/button"));
 	  clickWithPause(PrivatProjectCode);
-	  
-	  // Scroll down to the element to ensure it is in view
-	  Actions actions = new Actions(driver);
-	  actions.moveToElement(PrivatProjectCode).sendKeys(Keys.PAGE_DOWN).build().perform();
-	  Thread.sleep(1500);
-
-/*	  
+/*  
 	  //Project ID.
 	  WebElement ProjectID=driver.findElement(By.xpath("//*[@id=\"Project ID\"]"));
       clickWithPause(ProjectID);
 	  ProjectID.sendKeys(Keys.CONTROL + "A",Keys.DELETE);
 	  ProjectID.sendKeys("7985369", Keys.ENTER);
+	  System.out.println("Project ID entered: " + ProjectID.getAttribute("value"));
 	  
 	  //Project Short Name.
 	  WebElement ProjectShortName=driver.findElement(By.xpath("//*[@id=\"Project Short Name\"]"));
 	  clickWithPause(ProjectShortName);
 	  ProjectShortName.sendKeys(Keys.CONTROL + "A",Keys.DELETE);
 	  ProjectShortName.sendKeys("Under_Testing_Project",Keys.ENTER);
+	  System.out.println("Project Short Name entered: " + ProjectShortName.getAttribute("value"));
 	  Thread.sleep(3000);
 	  
 	  //Edit Project Name
 	  WebElement projectName = driver.findElement(By.xpath("//*[@id=\"Project Name\"]"));
-	  projectName.click();
+	  clickWithPause(projectName);
 	  projectName.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, "1", Keys.ENTER);
 	  projectName.sendKeys("Test_PN", Keys.ENTER);
-  
+	  System.out.println("Project Name entered: " + projectName.getAttribute("value"));
+	  
 	  //Change Project State
 	  WebElement ProjectState=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[4]/div/select"));
-	  ProjectState.click();
+	  clickWithPause(ProjectState);
 	  Select S=new Select(ProjectState);
 	  S.selectByIndex(2);
 	  ProjectState.sendKeys(Keys.ENTER);
@@ -100,32 +97,32 @@ public class PfM extends BaseClass {
       Thread.sleep(2000);
       
 	  //Client.
-	  WebElement Client=driver.findElement(By.name("Client_Name"));
-	  Client.click();
+	  WebElement Client=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[5]/div/select"));
+	  clickWithPause(Client);
       Select Clientdrop=new Select(Client);
-      Clientdrop.selectByIndex(2);
-      WebElement Save1=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
+      Clientdrop.selectByIndex(3);
+      WebElement Save1=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[5]/div/select"));
       Save1.click();
  	
 	  //Project Manager.
 	  WebElement ProjectManager=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[7]/div/div[2]/select"));
 	  clickWithPause(ProjectManager);
       Select PMdrop=new Select(ProjectManager);
-      PMdrop.selectByIndex(3);
+      PMdrop.selectByIndex(4);
       ProjectManager.sendKeys(Keys.ENTER);
       WebElement Save2=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       Save2.click();	  
   	  
       //Requester.
 	  WebElement Requester=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[8]/div/div[2]/select"));
-	  Requester.click();
-	  Thread.sleep(1000);
+	  clickWithPause(Requester);
       Select Requesterdrop=new Select(Requester);
       Requesterdrop.selectByVisibleText("Ambit Proveedor");
       Thread.sleep(1000);
       Requester.sendKeys(Keys.ENTER);
       WebElement Save3=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
-     
+      clickWithPause(Save3);
+ */     
       //Sponsor.
 	  WebElement Sponsor=driver.findElement(By.xpath("/html/body/div[1]/body/main/div[3]/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[9]/div/div[2]/select"));
 	  clickWithPause(Sponsor);
@@ -133,26 +130,36 @@ public class PfM extends BaseClass {
       Sponsordrop.selectByIndex(3);
       WebElement Save4=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[1]/div[2]/div/button[2]"));
       clickWithPause(Save4);
-      //Thread.sleep(1500);
-
+      Thread.sleep(1500);
+      
+      // Scroll down to the element to ensure it is in view
+	  Actions actions = new Actions(driver);
+	  actions.moveToElement(Sponsor).sendKeys(Keys.PAGE_DOWN).build().perform();
+	  Thread.sleep(1500);
+ 
 	  //Baseline Start
 	  WebElement BaselineStart=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[11]/div[1]/div/div/input"));
 	  clickWithPause(BaselineStart);
 	  BaselineStart.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
 	  BaselineStart.sendKeys("2024-05-23",Keys.ENTER);
+	  System.out.println("Baseline Start entered: " + BaselineStart.getAttribute("value"));
 	 
 	  //BaselineDuration
 	  WebElement BaselineDuration=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[12]/div/input"));
 	  BaselineDuration.sendKeys(Keys.CONTROL+ "A",Keys.DELETE);
 	  BaselineDuration.sendKeys("89.09",Keys.ENTER);
       Thread.sleep(2000);
+      System.out.println("Baseline Duration entered: " + BaselineDuration.getAttribute("value"));
      
 	  //Baseline Finish
 	  WebElement BaselineFinish=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[13]/div[1]/div"));
 	  clickWithPause(BaselineFinish);
 	  BaselineFinish.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
-	  BaselineFinish.sendKeys("2024-12-31",Keys.ENTER);
- */ 	  
+	  BaselineFinish.sendKeys("2024-12-31");
+	  Thread.sleep(1500);
+	  BaselineDuration.sendKeys(Keys.ENTER);
+	  System.out.println("Baseline Finish entered: " + BaselineFinish.getAttribute("value"));
+ 	  
 	  //Baseline Cost
 	  WebElement Baselinecost=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[14]/div/input"));
 	  clickWithPause(Baselinecost);
@@ -167,7 +174,7 @@ public class PfM extends BaseClass {
 	  Thread.sleep(2000);
 	 
 	  //Size.
-	  WebElement Size=driver.findElement(By.cssSelector("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[16]/div/input"));
+	  WebElement Size=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[16]/div/input"));
 	  clickWithPause(Size);
 	  Size.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
 	  Size.sendKeys("VXVML",Keys.ENTER); 
@@ -184,17 +191,17 @@ public class PfM extends BaseClass {
 	  WebElement Probablity=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[18]/div/input"));
 	  clickWithPause(Probablity);
 	  Probablity.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
-	  Probablity.sendKeys("89.98",Keys.ENTER);
+	  Probablity.sendKeys("89",Keys.ENTER);
 	  Thread.sleep(2000);
 	  
 	  //Project Comment.
 	  WebElement ProjectComment=driver.findElement(By.xpath("//*[@id=\"tab_INITIATION\"]/div/div[2]/div/div/div[2]/div/form/fieldset/div[3]/div[19]/div/textarea[1]"));
-	  ProjectComment.click();
+	  clickWithPause(ProjectComment);
 	  ProjectComment.sendKeys(Keys.CONTROL+"A",Keys.DELETE);
 	  ProjectComment.sendKeys("67",Keys.ENTER);
 	  Thread.sleep(2000);
 	  
 	  driver.quit();
-	  
+	    
 	}
 }
